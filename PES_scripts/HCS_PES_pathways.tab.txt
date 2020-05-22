@@ -1,0 +1,10 @@
+FVC_CHR_BP_Circadian_clock_LIBERAL	FVC	HCS_Circadian_clock	0.05
+FVC_CHR_BP_Secretin_b2_LIBERAL	FVC	HCS_Secretin_b2	0.005
+FVC_CHR_BP_Pathways_in_cancer_LIBERAL	FVC	HCS_Pathways_in_cancer	1
+CHR_BP_Common_variant_FVC	FVC	HCS_genome_wide_PGS	1,0.05,0.005
+CHR_BP_FVC_NABA_matrisome_LIBERAL	FVC	HCS_ECM_NABA_matrisome	1
+CHR_BP_common_variant_FEV1	FEV1	HCS_genome_wide_PGS	1,0.05
+CHR_BP_FEV1_pathways_in_cancer_LIBERAL	FEV1	HCS_Pathways_in_cancer	1
+CHR_BP_FEV1_Dilated_Cardiomyopathy_LIBERAL	FEV1	HCS_Dilated_cardiomyopathy	1
+CHR_BP_FEV1_Extension_of_telomeres_LIBERAL	FEV1	HCS_Extension_of_telomeres	0.05
+
