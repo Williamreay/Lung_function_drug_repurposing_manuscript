@@ -60,7 +60,7 @@ PES_stats_FVC$Genome_wide_0.05_threshold <- as.numeric(scale(PES_stats_FVC$Genom
 PES_stats_FVC$Genome_wide_0.005_threshold <- as.numeric(scale(PES_stats_FVC$Genome_wide_0.005_threshold))
 PES_stats_FVC$Circadian_clock_PES <- as.numeric(scale(PES_stats_FVC$Circadian_clock_PES))
 PES_stats_FVC$Class_b2_Secretin_PES <- as.numeric(scale(PES_stats_FVC$Class_b2_Secretin_PES))
-PES_stats_FEV1$Pathways_in_cancer_PES <- as.numeric(scale(PES_stats_FVC$Pathways_in_cancer_PES))
+PES_stats_FVC$Pathways_in_cancer_PES <- as.numeric(scale(PES_stats_FVC$Pathways_in_cancer_PES))
 PES_stats_FVC$ECM_PES <- as.numeric(scale(PES_stats_FVC$ECM_PES))
 
 ## Circadian clock FVC PES
