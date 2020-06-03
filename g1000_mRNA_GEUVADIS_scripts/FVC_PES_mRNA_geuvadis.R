@@ -99,7 +99,7 @@ Merged_Circadian_clock <- merge(Circadian_clock_genes, Available_ID, by = "Stabl
 
 List_Circadian_clock <- as.list(Merged_Circadian_clock)[[1]]
 
-## Define linear model to test the effect of FVC Pathways in cancer PES (P < 1) on these genes
+## Define linear model to test the effect of FVC Circadian clock PES (P < 0.05) on these genes
 
 PES_Circadian_clock_model <- function(v){
   PES_Circadian_clock_regresssion_result <- lm(glue::glue('{v} ~ SEX + PC1 + PC2 + PC3 + Genome_wide_PGS_0_05_threshold + Circadian_clock_PES'), data = Merged_genotype_mRNA_geuvadis)
@@ -140,7 +140,7 @@ Merged_Class_b2_secretin <- merge(Class_b2_secretin_genes, Available_ID, by = "S
 
 List_Class_b2_secretin <- as.list(Merged_Class_b2_secretin)[[1]]
 
-## Define linear model to test the effect of FVC Pathways in cancer PES (P < 1) on these genes
+## Define linear model to test the effect of FVC Class b2 secretin PES (P < 0.005) on these genes
 
 PES_Class_b2_secretin_model <- function(v){
   PES_Class_b2_secretin_regresssion_result <- lm(glue::glue('{v} ~ SEX + PC1 + PC2 + PC3 + Genome_wide_PGS_0_005_threshold + Class_b2_secretin_PES'), data = Merged_genotype_mRNA_geuvadis)
@@ -181,7 +181,7 @@ Merged_NABA_matrisome <- merge(NABA_matrisome_genes, Available_ID, by = "Stable_
 
 List_NABA_matrisome <- as.list(Merged_NABA_matrisome)[[1]]
 
-## Define linear model to test the effect of FVC Pathways in cancer PES (P < 1) on these genes
+## Define linear model to test the effect of FVC ECM PES (P < 1) on these genes
 
 PES_NABA_matrisome_model <- function(v){
   PES_NABA_matrisome_regresssion_result <- lm(glue::glue('{v} ~ SEX + PC1 + PC2 + PC3 + Genome_wide_PGS_all_SNPs_threshold + NABA_matrisome_PES'), data = Merged_genotype_mRNA_geuvadis)

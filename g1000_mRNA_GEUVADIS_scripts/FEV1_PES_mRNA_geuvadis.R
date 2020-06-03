@@ -98,7 +98,7 @@ Merged_Dilated_cardiomyopathy <- merge(Dilated_cardiomyopathy_genes, Available_I
 
 List_Dilated_cardiomyopathy <- as.list(Merged_Dilated_cardiomyopathy)[[1]]
 
-## Define linear model to test the effect of FEV1 Pathways in cancer PES (P < 1) on these genes
+## Define linear model to test the effect of FEV1 Dilated Cardiomyopathy PES (P < 1) on these genes
 
 PES_Dilated_cardiomyopathy_model <- function(v){
   PES_Dilated_cardiomyopathy_regresssion_result <- lm(glue::glue('{v} ~ SEX + PC1 + PC2 + PC3 + Genome_wide_PGS_all_SNPs_threshold + Dilated_cardiomyopathy_PES'), data = Merged_genotype_mRNA_geuvadis)
@@ -139,7 +139,7 @@ Merged_Extension_of_telomeres <- merge(Extension_of_telomeres_genes, Available_I
 
 List_Extension_of_telomeres <- as.list(Merged_Extension_of_telomeres)[[1]]
 
-## Define linear model to test the effect of FEV1 Pathways in cancer PES (P < 1) on these genes
+## Define linear model to test the effect of FEV1 Extension of telomeres PES (P < 0.05) on these genes
 
 PES_Extension_of_telomeres_model <- function(v){
   PES_Extension_of_telomeres_regresssion_result <- lm(glue::glue('{v} ~ SEX + PC1 + PC2 + PC3 + Genome_wide_PGS_0_05_threshold + Extension_of_telomeres_PES'), data = Merged_genotype_mRNA_geuvadis)
