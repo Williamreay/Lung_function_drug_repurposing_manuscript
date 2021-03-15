@@ -1,5 +1,5 @@
 ## Lung_function_drug_repurposing_manuscript
-Scripts used in Reay et al. study Genomics informed drug repurposing candidates for lung function and their implications for viral infection
+Scripts used in Reay et al. Genetic association and causal inference converge on hyperglycaemia as a modifiable factor to improve lung function. eLife 10, e63115 (2021)
 
 The following scripts are featured in this respository:
 
