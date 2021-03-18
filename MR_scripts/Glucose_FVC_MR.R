@@ -50,12 +50,8 @@ Filtered_glucose_FVC <- Glucose_FVC_harmonised %>% filter(mr_keep == TRUE)
 
 MR_PRESSO_input_glucose_FVC <- Filtered_glucose_FVC[,c("SNP", "beta.outcome", "beta.exposure", "se.outcome", "se.exposure")]
 
-MR_PRESSO_input_glucose_FVC$sd.exposure <- MR_PRESSO_input_glucose_FVC$se.exposure*sqrt(58074)
-
-MR_PRESSO_input_glucose_FVC$sd.outcome <- MR_PRESSO_input_glucose_FVC$se.outcome*sqrt(341175)
-
 MR_PRESSO_glucose_FVC <- mr_presso(BetaOutcome = "beta.outcome", BetaExposure = "beta.exposure", 
-                                          SdOutcome = "sd.outcome", SdExposure = "sd.exposure", OUTLIERtest = TRUE,
+                                          SdOutcome = "se.outcome", SdExposure = "se.exposure", OUTLIERtest = TRUE,
                                           DISTORTIONtest = TRUE, data = MR_PRESSO_input_glucose_FVC,
                                           NbDistribution = 10000)
 
