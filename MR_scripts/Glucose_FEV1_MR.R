@@ -50,12 +50,8 @@ Filtered_glucose_FEV1 <- Glucose_FEV1_harmonised %>% filter(mr_keep == TRUE)
 
 MR_PRESSO_input_glucose_FEV1 <- Filtered_glucose_FEV1[,c("SNP", "beta.outcome", "beta.exposure", "se.outcome", "se.exposure")]
 
-MR_PRESSO_input_glucose_FEV1$sd.exposure <- MR_PRESSO_input_glucose_FEV1$se.exposure*sqrt(58074)
-
-MR_PRESSO_input_glucose_FEV1$sd.outcome <- MR_PRESSO_input_glucose_FEV1$se.outcome*sqrt(341175)
-
 MR_PRESSO_glucose_FEV1 <- mr_presso(BetaOutcome = "beta.outcome", BetaExposure = "beta.exposure", 
-                                          SdOutcome = "sd.outcome", SdExposure = "sd.exposure", OUTLIERtest = TRUE,
+                                          SdOutcome = "se.outcome", SdExposure = "se.exposure", OUTLIERtest = TRUE,
                                           DISTORTIONtest = TRUE, data = MR_PRESSO_input_glucose_FEV1,
                                           NbDistribution = 10000)
 
